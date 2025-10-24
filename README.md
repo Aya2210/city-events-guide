@@ -42,16 +42,4 @@
 - **CSS Animations** - الحركات
 - **Form Validation** - التحقق من النماذج
 
-## 📁 هيكل الملفات
-Project-folder/
-├── index.html
-├── events.html
-├── event.html
-├── about.html
-├── contact.html
-├── assets/
-│   ├── css/
-│   │   └── styles.css
-│   ├── js/
-│   │   └── main.js
-│   └── img
+##
