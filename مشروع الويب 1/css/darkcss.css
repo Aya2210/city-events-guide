@@ -1,0 +1,112 @@
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0 !important;
+    transition: all 0.3s ease;
+}
+
+.dark-mode .bg-light {
+    background-color: #2d2d2d !important;
+}
+
+.dark-mode .bg-white {
+    background-color: #2d2d2d !important;
+}
+
+.dark-mode .text-white {
+    color: #e0e0e0 !important;
+}
+
+.dark-mode .text-dark {
+    color: #e0e0e0 !important;
+}
+
+.dark-mode .text-muted {
+    color: #a0a0a0 !important;
+}
+
+.dark-mode .text-body {
+    color: #e0e0e0 !important;
+}
+
+/* Cards */
+.dark-mode .card {
+    background-color: #2d2d2d !important;
+    border-color: #404040 !important;
+    color: #e0e0e0 !important;
+}
+
+.dark-mode .card-header {
+    background-color: #363636 !important;
+    border-bottom-color: #404040 !important;
+}
+
+.dark-mode .card-footer {
+    background-color: #363636 !important;
+    border-top-color: #404040 !important;
+}
+
+/* Navbar */
+.dark-mode .navbar-dark {
+    background-color: #2d2d2d !important;
+}
+
+.dark-mode .navbar-light {
+    background-color: #2d2d2d !important;
+}
+
+/* Buttons */
+.dark-mode .btn-outline-primary {
+    border-color: #007bff !important;
+    color: #007bff !important;
+}
+
+.dark-mode .btn-outline-primary:hover {
+    background-color: #007bff !important;
+    color: #fff !important;
+}
+
+/* Footer */
+.dark-mode footer {
+    background-color: #1a1a1a !important;
+}
+
+.dark-mode footer a {
+    color: #e0e0e0 !important;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 9999 !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    border: none !important;
+    background-color: #007bff !important;
+    color: white !important;
+    font-size: 1.2rem !important;
+    cursor: pointer !important;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.3) !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1) !important;
+    background-color: #0056b3 !important;
+}
+
+[dir="rtl"] .dark-mode-toggle {
+    left: 20px !important;
+    right: auto !important;
+}
+
+[dir="ltr"] .dark-mode-toggle {
+    right: 20px !important;
+    left: auto !important;
+}
