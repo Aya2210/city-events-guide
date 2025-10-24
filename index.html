@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="ar">دليل فعاليات دمشق</title>
+    <title data-lang="en" style="display:none;">Damascus Events Guide</title>
+    <link rel="stylesheet" href="dark-mode/dark-mode.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="dark-mode/dark-mode.css">
+    
+    <style>
+        :root {
+            --primary: #2c5aa0;
+            --secondary: #3498db;
+            --success: #27ae60;
+            --dark: #2c3e50;
+            --light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--light);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .event-card {
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .loading-spinner {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط اللغة -->
+    <div class="language-switcher py-2 bg-light">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-globe-americas text-primary me-2"></i>
+                    <span class="fw-semibold" data-lang="ar">اختر اللغة:</span>
+                    <span class="fw-semibold" data-lang="en" style="display:none;">Choose Language:</span>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-primary active" onclick="changeLanguage('ar')">
+                        <img src="https://flagcdn.com/w40/sy.png" alt="العربية" width="20" class="me-2 rounded">
+                        <span>العربية</span>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-primary" onclick="changeLanguage('en')">
+                        <img src="https://flagcdn.com/w40/us.png" alt="English" width="20" class="me-2 rounded">
+                        <span>English</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+     <script src="dark-mode/dark-mode.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <i class="fas fa-calendar-alt me-2"></i>
+                <span data-lang="ar">دليل فعاليات دمشق</span>
+                <span data-lang="en" style="display:none;">Damascus Events Guide</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <span data-lang="ar">الرئيسية</span>
+                            <span data-lang="en" style="display:none;">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">
+                            <span data-lang="ar">الفعاليات</span>
+                            <span data-lang="en" style="display:none;">Events</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            <span data-lang="ar">عن الدليل</span>
+                            <span data-lang="en" style="display:none;">About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <span data-lang="ar">اتصل بنا</span>
+                            <span data-lang="en" style="display:none;">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bold mb-4" data-lang="ar">اكتشف أفضل الفعاليات في دمشق</h1>
+                <h1 class="display-4 fw-bold mb-4" data-lang="en" style="display:none;">Discover Amazing Events in Damascus</h1>
+                <p class="lead mb-5 fs-4" data-lang="ar">
+                    من حفلات موسيقية، معارض فنية، فعاليات رياضية، وورش عمل تعليمية. كل ما تحتاجه في مكان واحد.
+                </p>
+                <p class="lead mb-5 fs-4" data-lang="en" style="display:none;">
+                    From music concerts, art exhibitions, sports events, to educational workshops. Everything you need in one place.
+                </p>
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <a href="#featured" class="btn btn-light btn-lg px-4 py-3 fw-semibold">
+                        <i class="fas fa-star me-2"></i>
+                        <span data-lang="ar">الفعاليات البارزة</span>
+                        <span data-lang="en" style="display:none;">Featured Events</span>
+                    </a>
+                    <a href="events.html" class="btn btn-outline-light btn-lg px-4 py-3 fw-semibold">
+                        <i class="fas fa-search me-2"></i>
+                        <span data-lang="ar">استكشف الكل</span>
+                        <span data-lang="en" style="display:none;">Explore All</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Events -->
+    <section id="featured" class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-dark mb-3" data-lang="ar">✨ الفعاليات البارزة</h2>
+                <h2 class="display-5 fw-bold text-dark mb-3" data-lang="en" style="display:none;">✨ Featured Events</h2>
+                <p class="text-muted fs-5" data-lang="ar">اكتشف أبرز الفعاليات المميزة لهذا الأسبوع</p>
+                <p class="text-muted fs-5" data-lang="en" style="display:none;">Discover the most prominent featured events for this week</p>
+            </div>
+            
+            <div class="row g-4" id="featuredEvents">
+                <!-- سيتم تعبئتها بالجافاسكريبت -->
+                <div class="col-12 text-center py-5">
+                    <div class="loading-spinner mb-3"></div>
+                    <p class="text-muted" data-lang="ar">جاري تحميل الفعاليات البارزة...</p>
+                    <p class="text-muted" data-lang="en" style="display:none;">Loading featured events...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Categories -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-dark mb-3" data-lang="ar">📂 التصنيفات السريعة</h2>
+                <h2 class="display-5 fw-bold text-dark mb-3" data-lang="en" style="display:none;">📂 Quick Categories</h2>
+                <p class="text-muted fs-5" data-lang="ar">اختر من بين مجموعة متنوعة من الفعاليات المنظمة</p>
+                <p class="text-muted fs-5" data-lang="en" style="display:none;">Choose from a variety of organized events</p>
+            </div>
+            
+            <div class="row g-3 justify-content-center">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <button class="btn btn-primary w-100 h-100 py-4 category-btn" data-category="all">
+                        <i class="fas fa-all"></i>
+                        <div class="fw-semibold mt-2" data-lang="ar">الكل</div>
+                        <div class="fw-semibold mt-2" data-lang="en" style="display:none;">All</div>
+                    </button>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <button class="btn btn-outline-primary w-100 h-100 py-4 category-btn" data-category="music">
+                        <i class="fas fa-music"></i>
+                        <div class="fw-semibold mt-2" data-lang="ar">موسيقى</div>
+                        <div class="fw-semibold mt-2" data-lang="en" style="display:none;">Music</div>
+                    </button>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <button class="btn btn-outline-primary w-100 h-100 py-4 category-btn" data-category="sports">
+                        <i class="fas fa-running"></i>
+                        <div class="fw-semibold mt-2" data-lang="ar">رياضة</div>
+                        <div class="fw-semibold mt-2" data-lang="en" style="display:none;">Sports</div>
+                    </button>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <button class="btn btn-outline-primary w-100 h-100 py-4 category-btn" data-category="art">
+                        <i class="fas fa-palette"></i>
+                        <div class="fw-semibold mt-2" data-lang="ar">فنون</div>
+                        <div class="fw-semibold mt-2" data-lang="en" style="display:none;">Arts</div>
+                    </button>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <button class="btn btn-outline-primary w-100 h-100 py-4 category-btn" data-category="culture">
+                        <i class="fas fa-landmark"></i>
+                        <div class="fw-semibold mt-2" data-lang="ar">ثقافة</div>
+                        <div class="fw-semibold mt-2" data-lang="en" style="display:none;">Culture</div>
+                    </button>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <button class="btn btn-outline-primary w-100 h-100 py-4 category-btn" data-category="food">
+                        <i class="fas fa-utensils"></i>
+                        <div class="fw-semibold mt-2" data-lang="ar">طعام</div>
+                        <div class="fw-semibold mt-2" data-lang="en" style="display:none;">Food</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Events -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-dark mb-3" data-lang="ar">🎪 أحدث الفعاليات</h2>
+                <h2 class="display-5 fw-bold text-dark mb-3" data-lang="en" style="display:none;">🎪 Latest Events</h2>
+                <p class="text-muted fs-5" data-lang="ar">استكشف جميع الفعاليات القادمة في مدينتك</p>
+                <p class="text-muted fs-5" data-lang="en" style="display:none;">Explore all upcoming events in your city</p>
+            </div>
+            
+            <div class="row g-4" id="eventsGrid">
+                <!-- سيتم تعبئتها بالجافاسكريبت -->
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="events.html" class="btn btn-primary btn-lg px-5 py-3 fw-semibold">
+                    <i class="fas fa-list me-2"></i>
+                    <span data-lang="ar">عرض جميع الفعاليات</span>
+                    <span data-lang="en" style="display:none;">View All Events</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-calendar-alt me-2"></i>
+                        <span data-lang="ar">دليل فعاليات دمشق</span>
+                        <span data-lang="en" style="display:none;">Damascus Events Guide</span>
+                    </h5>
+                    <p class="text-light" data-lang="ar">
+                        منصة شاملة لاكتشاف واستكشاف أفضل الفعاليات والأنشطة في مدينتك.
+                    </p>
+                    <p class="text-light" data-lang="en" style="display:none;">
+                        A comprehensive platform to discover and explore the best events and activities in your city.
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h6 class="fw-semibold mb-3" data-lang="ar">روابط سريعة</h6>
+                    <h6 class="fw-semibold mb-3" data-lang="en" style="display:none;">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-light text-decoration-none" data-lang="ar">الرئيسية</a></li>
+                        <li class="mb-2"><a href="events.html" class="text-light text-decoration-none" data-lang="ar">الفعاليات</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-light text-decoration-none" data-lang="ar">عن الدليل</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none" data-lang="ar">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h6 class="fw-semibold mb-3" data-lang="ar">معلومات التواصل</h6>
+                    <h6 class="fw-semibold mb-3" data-lang="en" style="display:none;">Contact Info</h6>
+                    <ul class="list-unstyled text-light">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@eventsguide.com</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +963 11 123 4567</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> <span data-lang="ar">دمشق، سوريا</span></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h6 class="fw-semibold mb-3" data-lang="ar">تابعنا</h6>
+                    <h6 class="fw-semibold mb-3" data-lang="en" style="display:none;">Follow Us</h6>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-light fs-4"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light fs-4"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light fs-4"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light fs-4"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center text-light">
+                <p class="mb-0" data-lang="ar">&copy; 2024 دليل فعاليات دمشق. جميع الحقوق محفوظة.</p>
+                <p class="mb-0" data-lang="en" style="display:none;">&copy; 2024 Damascus Events Guide. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="btn btn-primary rounded-circle position-fixed shadow" style="bottom: 30px; left: 30px; display: none; width: 60px; height: 60px; z-index: 1000;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript Files -->
+    <script src="js/language.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
