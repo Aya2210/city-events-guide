@@ -1,4 +1,4 @@
-// بيانات الفعاليات الكاملة مع صور مناسبة
+
 const eventsData = [
     {
         id: 1,
@@ -186,7 +186,7 @@ const eventsData = [
             en: "Al-Sibki Garden - Abu Rummaneh"
         },
         image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=500&fit=crop",
-        featured: false,
+        featured: true,
         price: {
             ar: "مجاني",
             en: "Free"
@@ -214,7 +214,7 @@ const eventsData = [
             en: "Syrian Chess Club - Al-Mazzah"
         },
         image: "https://images.unsplash.com/photo-1586165368501-2e5b8a1f7a0f?w=800&h=500&fit=crop",
-        featured: false,
+        featured: true,
         price: {
             ar: "15,000 ل.س",
             en: "15,000 SYP"
@@ -435,4 +435,5 @@ window.addEventListener('languageChange', function(e) {
         displayFeaturedEvents();
         displayLatestEvents();
     }, 100);
+
 });
