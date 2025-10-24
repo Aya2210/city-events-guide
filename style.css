@@ -1,0 +1,111 @@
+:root {
+    --primary-color: #2c5aa0;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --success-color: #27ae60;
+    --dark-color: #2c3e50;
+    --light-color: #f8f9fa;
+}
+
+/* أنماط أساسية */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--light-color);
+    transition: all 0.3s ease;
+}
+
+/* شريط اللغة */
+.language-switcher {
+    background: white;
+    padding: 10px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* كروت الفعاليات */
+.event-card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* الوضع المظلم */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.dark-mode .card {
+    background-color: #2d2d2d;
+    border-color: #404040;
+    color: #e0e0e0;
+}
+
+.dark-mode .bg-light {
+    background-color: #2d2d2d !important;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .event-card {
+        margin-bottom: 20px;
+    }
+    
+    .hero-section {
+        padding: 60px 0;
+    }
+}
+/* ملف CSS للوضع المظلم */
+.dark-mode {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0 !important;
+}
+
+.dark-mode .bg-light {
+    background-color: #2d2d2d !important;
+}
+
+.dark-mode .bg-white {
+    background-color: #2d2d2d !important;
+}
+
+.dark-mode .card {
+    background-color: #2d2d2d !important;
+    border-color: #404040 !important;
+    color: #e0e0e0 !important;
+}
+
+.dark-mode .text-dark {
+    color: #e0e0e0 !important;
+}
+
+.dark-mode .text-muted {
+    color: #a0a0a0 !important;
+}
+
+/* زر الوضع المظلم */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+}
